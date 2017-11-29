@@ -1,0 +1,5 @@
+oos.path.join(BASE_DIR, 'db.sqlite3'),che__
+myvenv
+db.sqlite3
+/static
+.DS_Stores.path.join(BASE_DIR, 'db.sqlite3'),
