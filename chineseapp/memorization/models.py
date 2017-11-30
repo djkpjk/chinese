@@ -1,3 +1,9 @@
 from django.db import models
+from django.utils import timezone
 
-# Create your models here.
+class ChineseSentence(models.Model):
+    raw_sentence = models.TextField()
+    english_meaning = models.TextField()
+    pinyin = models.TextField()
+    chinese_sentence = models.TextField()
+    lesson = models.IntegerField(default=1)

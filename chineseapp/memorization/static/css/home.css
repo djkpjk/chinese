@@ -1,0 +1,70 @@
+h1 a {
+    color: #001f3f;
+    font-family: 'Lobster';
+}
+
+body {
+    padding-left: 15px;
+}
+
+.page-header {
+    background-color: #3e5151;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+.content {
+    margin-left: 40px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Lobster', cursive;
+}
+
+.raw-sentence{
+    color: #001f3f;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 20pt;
+}
+
+
+
+.lesson {
+    color: #001630;
+    font-family: 'Lato';
+    font-size: 16pt;
+}
+
+
+@button-colour: #009ED8;
+@button-text: #ffffff;
+.button{
+    display: block;
+    height: 100px;
+    width: 300px;
+    background: linear-gradient(#000000,#434343);
+
+    border: 2px solid rgba(33, 68, 72, 0.59);
+
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    font: bold 3.2em/100px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+
+    border-radius: 50px;
+
+    box-shadow: 0 8px 0 #1b383b;
+
+    text-shadow: 0 2px 2px rgba(255, 255, 255, 0.2);
+
+
+a.button {
+    text-decoration: none;
+}
+

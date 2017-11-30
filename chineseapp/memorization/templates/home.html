@@ -1,12 +1,27 @@
-<!-- memorization/templates/home.html -->
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Hello!</title>
-    </head>
-    <body>
-        <h1>Hello, I am Learning Django!</h1>
-        <a href="/about/">About the website</a>
-    </body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1><a href="">Lesson 1: 你好吗?</a></h1>
+    <div class="lesson-2">
+        <h1><a href="{% url 'lesson_base' lesson=2 %}">Lesson 2: 你忙吗?</a></h1>
+    </div>
+    <div class="lesson-3">
+        <h1><a href="{% url 'lesson_base' lesson=3 %}">Lesson 3: 你是哪国人?</a></h1>
+    </div>
+    <div class="lesson-4">
+        <h1><a href="{% url 'lesson_base' lesson=4 %}">Lesson 4: 认识你很高兴.</a></h1>
+    </div>
+    <div class="lesson-5">
+        <h1><a href="{% url 'lesson_base' lesson=5 %}">Lesson 5: 餐厅在哪儿?</a></h1>
+    </div>
+    <div class="lesson-6">
+        <h1><a href="{% url 'lesson_base' lesson=6 %}">Lesson 6: 我们去游泳, 好吗?</a></h1>
+    </div>
+    <div class="lesson-7">
+        <h1><a href="{% url 'lesson_base' lesson=7 %}">Lesson 7: 你认识不认识他?</a></h1>
+    </div>
+    <div class="lesson-8">
+        <h1><a href="{% url 'lesson_base' lesson=8 %}">Lesson 8: 你们家有几口人?</a></h1>
+    </div>
+    <h1><a href="{% url 'lesson_base' lesson=100 %}">Extras</a></h1>
+{% endblock %}

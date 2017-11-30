@@ -1,10 +1,17 @@
-from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.shortcuts import render, get_object_or_404
+from .models import ChineseSentence
 
 # Create your views here.
-class HomePageView(TemplateView):
-    template_name = "home.html"
-    # def get(self, request, **kwargs):
-    #     return render(request, 'home.html', context=None)
-class AboutPageView(TemplateView):
-    template_name = "about.html"
+def home(request):
+    return render(request, 'home.html')
+
+def lesson_base(request, lesson):
+    sentences = ChineseSentence.objects.filter(lesson=lesson)
+    length = len(sentences)
+    return render(request, 'lesson_base.html', {'sentences': sentences, 'length': length, 'lesson': lesson})
+
+def quiz(request, lesson):
+    sentences = ChineseSentence.objects.filter(lesson=lesson)
+    length = len(sentences)
+    return render(request, 'quiz.html', {'sentences': sentences, 'length': length, 'lesson': lesson})
+

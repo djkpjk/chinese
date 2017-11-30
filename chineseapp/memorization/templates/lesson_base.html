@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+{% for sentence in sentences %}
+    <div class='raw-sentence'>
+        <p>{{forloop.counter}}) {{sentence.raw_sentence}}</p>
+    </div>
+    <div class='lesson'>
+        <p>English meaning: {{sentence.english_meaning}}</p>
+        <p>Pinyin: {{sentence.pinyin}}</p>
+        <p>{{sentence.chinese_sentence}}</p>
+    </div>
+{% endfor %}
+<br><br>
+<a href="{% url 'quiz' lesson=lesson %}" class="button">Take the quiz</a>
+<br><br><br><br><br>
+{% endblock %}
